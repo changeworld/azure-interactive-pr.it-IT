@@ -1,0 +1,49 @@
+### YamlMime:Tutorial
+title: <span data-ttu-id="2b70e-101">Creare un'app Web serverless in Azure</span><span class="sxs-lookup"><span data-stu-id="2b70e-101">Build a serverless web app in Azure</span></span>
+metadata:
+  title: Creare un'app Web serverless in Azure | Microsoft Docs
+  description: Questa esercitazione illustra come pubblicare un'app Web statica che usa componenti serverless di Azure per caricare, analizzare e modificare immagini.
+  audience: Developer
+  level: Intermediate
+  displayType: two-column
+  interactive: azurecli
+  author: ggailey777
+  manager: cfowler
+  ms.service: multiple
+  ms.topic: interactive-tutorial
+  ms.date: 06/22/2018
+  ms.author: glenga
+  ms.openlocfilehash: d0bd4c0b4b1a6995e2d5148a4f49769aee0f4dc7
+  ms.sourcegitcommit: f96b5b10238122db9506f1a7c7f53ace9b28c293
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 08/24/2018
+  ms.locfileid: "40079309"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](./includes/intro.md)]
+- title: <span data-ttu-id="2b70e-104">Creare un'app Web in Archiviazione BLOB di Azure</span><span class="sxs-lookup"><span data-stu-id="2b70e-104">Create a web app in Azure Blob storage</span></span>
+  durationInMinutes: 12
+  content: >
+    [!INCLUDE [](./includes/static-site.md)]
+- title: <span data-ttu-id="2b70e-105">Caricare immagini in un archivio BLOB con Funzioni di Azure</span><span class="sxs-lookup"><span data-stu-id="2b70e-105">Upload images to Blob storage with Azure Functions</span></span>
+  durationInMinutes: 20
+  content: "[!INCLUDE [](./includes/upload-images.md)] \n"
+- title: <span data-ttu-id="2b70e-106">Ridimensionare le immagini con Funzioni di Azure</span><span class="sxs-lookup"><span data-stu-id="2b70e-106">Resize images with Azure Functions</span></span>
+  durationInMinutes: 15
+  content: >
+    [!INCLUDE [](includes/resize-images.md)]
+- title: <span data-ttu-id="2b70e-107">Archiviare i metadati delle immagini con Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="2b70e-107">Store image metadata with Azure Cosmos DB</span></span>
+  durationInMinutes: 15
+  content: >
+    [!INCLUDE [](includes/store-images.md)]
+- title: <span data-ttu-id="2b70e-108">Aggiungere didascalie alle immagini con Visione artificiale</span><span class="sxs-lookup"><span data-stu-id="2b70e-108">Add image captions with Computer Vision</span></span>
+  durationInMinutes: 15
+  content: >
+    [!INCLUDE [](includes/computer-vision.md)]
+- title: <span data-ttu-id="2b70e-109">Aggiungere l'autenticazione</span><span class="sxs-lookup"><span data-stu-id="2b70e-109">Add authentication</span></span>
+  durationInMinutes: 15
+  content: >
+    [!INCLUDE [](includes/authentication.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'
