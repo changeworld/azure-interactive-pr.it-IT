@@ -2,19 +2,19 @@
 title: File di inclusione
 description: File di inclusione
 services: functions
-author: tdykstra
+author: ggailey777
 manager: jeconnoc
 ms.service: multiple
 ms.topic: include
 ms.date: 06/21/2018
-ms.author: tdykstra
+ms.author: glenga
 ms.custom: include file
-ms.openlocfilehash: 7e51d3cd0533b4fb64d7dfa783af55266d536f54
-ms.sourcegitcommit: e721422a57e6deb95245135fd9f4f5677c344d93
+ms.openlocfilehash: f51b864cab14273c1e88dd85d22400e0e76ef770
+ms.sourcegitcommit: 81587470a181e314242c7a97cd0f91c82d4fe232
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "40079495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47460000"
 ---
 A questo punto, l'applicazione è una raccolta funzionale che consente di caricare e visualizzare le immagini. In questo modulo viene illustrato come usare l'API Visione artificiale di Servizi cognitivi Microsoft per generare le didascalie per le immagini caricate e salvare le didascalie con i metadati delle immagini in Cosmos DB.
 
