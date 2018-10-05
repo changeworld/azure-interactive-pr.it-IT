@@ -2,19 +2,19 @@
 title: File di inclusione
 description: File di inclusione
 services: functions
-author: tdykstra
+author: ggailey777
 manager: jeconnoc
 ms.service: multiple
 ms.topic: include
 ms.date: 06/21/2018
-ms.author: tdykstra
+ms.author: glenga
 ms.custom: include file
-ms.openlocfilehash: 56cfb4c2893977086309660f4f6941fd0d648913
-ms.sourcegitcommit: e721422a57e6deb95245135fd9f4f5677c344d93
+ms.openlocfilehash: 51c7d3e64424d499b473f3b138ce249a9cfd0182
+ms.sourcegitcommit: 81587470a181e314242c7a97cd0f91c82d4fe232
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "40079472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47460086"
 ---
 L'applicazione che si sta creando è una raccolta di foto che usa JavaScript lato client per chiamare API per caricare e visualizzare immagini. In questo modulo si creerà un'API usando una funzione senza server che genera un URL temporaneo per caricare un'immagine. L'applicazione Web usa l'URL generato per caricare un'immagine in un archivio Blob usando l'[API REST dell'archivio BLOB](https://docs.microsoft.com/rest/api/storageservices/blob-service-rest-api).
 
@@ -36,12 +36,21 @@ Funzioni di Azure è un servizio per l'esecuzione di funzioni senza server. Una 
 
 Un'app per le funzioni di Azure è un contenitore per una o più funzioni senza server.
 
-1. Nel gruppo di risorse creato in precedenza, creare una nuova app per le funzioni di Azure, assegnandole il nome univoco **first-serverless-app**. Le app per le funzioni richiedono un account di archiviazione. In questa esercitazione si userà l'account di archiviazione esistente.
+Nel gruppo di risorse creato in precedenza, creare una nuova app per le funzioni di Azure, assegnandole il nome univoco **first-serverless-app**. Le app per le funzioni richiedono un account di archiviazione. In questa esercitazione si userà l'account di archiviazione esistente.
 
-    ```azurecli
-    az functionapp create -n <function app name> -g first-serverless-app -s <storage account name> -c westcentralus
-    ```
+```azurecli
+az functionapp create -n <function app name> -g first-serverless-app -s <storage account name> -c westcentralus
+```
 
+## <a name="configure-the-function-app"></a>Configurare l'app per le funzioni
+
+L'app per le funzioni in questa esercitazione richiede la versione 1.x del runtime di Funzioni. Se si configura l'impostazione `FUNCTIONS_WORKER_RUNTIME` dell'applicazione su `~1`, l'app per le funzioni viene associata alla versione 1.x più recente. Configurare l'impostazione dell'applicazione con il comando [az functionapp config appsettings set](https://docs.microsoft.com/cli/azure/functionapp/config/appsettings#set).
+
+Nel comando seguente dell'interfaccia della riga di comando di Azure il valore "<app_name>" corrisponde al nome dell'app per le funzioni.
+
+```azurecli
+az functionapp config appsettings set --name <function app name> --g first-serverless-app --settings FUNCTIONS_WORKER_RUNTIME=~1
+```
 
 ## <a name="create-an-http-triggered-serverless-function"></a>Creare una funzione senza server attivata da HTTP
 
